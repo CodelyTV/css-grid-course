@@ -1,0 +1,18 @@
+.gallery {
+  margin: 0 -0.5rem;
+
+  > .card {
+    width: calc(33.333% - 1rem);
+    min-height: 31rem;
+    margin: 0.5rem;
+    float: left;
+
+    // &:nth-child(3n + 1) {
+    //   clear: both;
+    // }
+  }
+}
+
+.clearfix {
+  clear: both;
+}
