@@ -1,0 +1,14 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -0.5rem;
+
+  > * {
+    min-width: 15rem;
+    min-height: 31rem;
+    flex: 1 1 0;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
