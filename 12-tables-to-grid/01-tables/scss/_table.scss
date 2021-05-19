@@ -1,0 +1,11 @@
+.gallery {
+  border-collapse: separate;
+  border-spacing: 1rem;
+
+  td {
+    width: 33.333%;
+    padding: 0;
+    background: #fff;
+    vertical-align: top;
+  }
+}
