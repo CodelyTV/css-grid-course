@@ -1,0 +1,47 @@
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template: 31rem / 1fr;
+  place-content: center;
+
+  @media screen and (min-width: 40rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 55rem) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.ad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background: url('/img/ad-bg.png') no-repeat center;
+  background-size: cover;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  a {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  img {
+    width: 20rem;
+    max-width: 80%;
+    margin-bottom: 1rem;
+  }
+}
