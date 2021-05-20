@@ -1,0 +1,18 @@
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template: 31rem / 1fr;
+  place-content: center;
+
+  @media screen and (min-width: 40rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 55rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 70rem) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
