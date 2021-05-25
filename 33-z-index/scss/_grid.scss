@@ -41,11 +41,18 @@
   }
 
   &--highlighted {
+    z-index: 1;
+    border: 0.8rem solid #fff;
     grid-column: 2 / 4;
     grid-row: 2 / 4;
+    transform: rotate(45deg);
 
     &:nth-child(2) {
       grid-column: 4 / 6;
+    }
+
+    img {
+      transform: scale(1.5) rotate(-45deg);
     }
   }
 }
