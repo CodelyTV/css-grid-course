@@ -16,4 +16,13 @@
     height: 100%;
     object-fit: cover;
   }
+
+  &--highlighted {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+
+    &:nth-child(2) {
+      grid-column: 4 / 6;
+    }
+  }
 }
