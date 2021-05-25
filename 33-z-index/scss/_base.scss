@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ddd;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+a {
+  color: #289f5f;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: #19623b;
+  }
+}
+
+.container {
+  max-width: 72rem;
+  padding: 1rem;
+  margin: 0 auto;
+}

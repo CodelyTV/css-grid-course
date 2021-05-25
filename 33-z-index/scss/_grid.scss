@@ -1,0 +1,19 @@
+.team {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.member {
+  overflow: hidden;
+  background: #fff;
+  grid-column: span 2;
+  grid-row: span 2;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
