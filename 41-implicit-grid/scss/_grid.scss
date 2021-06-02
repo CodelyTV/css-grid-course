@@ -1,0 +1,20 @@
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 32rem;
+  place-content: center;
+
+  @media screen and (min-width: 35rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 55rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 70rem) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
