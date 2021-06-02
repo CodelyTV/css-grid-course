@@ -1,6 +1,11 @@
 .gallery {
   display: grid;
   gap: 1rem;
-  grid-auto-rows: 22rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+  grid-auto-flow: dense;
+  grid-auto-rows: 28rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(calc(50% - 1rem), 15rem), 1fr));
+}
+
+.featured {
+  grid-column: span 2;
 }
