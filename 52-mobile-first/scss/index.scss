@@ -36,6 +36,9 @@ p {
 }
 
 .title {
+  z-index: 1;
+  grid-row: 3;
+  grid-column: 1 / 5;
   margin: 0;
   padding: 1rem 0.5rem;
   color: #fff;
@@ -49,6 +52,12 @@ p {
     display: block;
     font-weight: 700;
   }
+}
+
+.title-block {
+  grid-row: 3;
+  grid-column: 5;
+  background: #000;
 }
 
 .quote {
