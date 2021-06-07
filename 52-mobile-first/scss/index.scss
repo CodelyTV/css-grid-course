@@ -30,6 +30,9 @@ p {
 
 .grid {
   display: grid;
+  grid-template-rows: 1fr repeat(6, auto) 1fr;
+  grid-template-columns: 1fr repeat(3, auto) 1fr;
+  min-height: 100vh;
 }
 
 .title {
@@ -51,6 +54,7 @@ p {
 .quote {
   padding: 0.3rem;
   font-size: 2rem;
+  white-space: nowrap;
   text-align: center;
 }
 
