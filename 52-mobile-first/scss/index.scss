@@ -130,9 +130,12 @@ p {
 .numbers {
   display: flex;
   flex-direction: column;
+  grid-row: 7;
+  grid-column: 3 / 5;
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
+  writing-mode: vertical-rl;
 }
 
 .bars {
@@ -140,27 +143,27 @@ p {
   flex-grow: 1;
   align-items: flex-end;
   justify-content: space-around;
-  min-height: 17rem;
+  block-size: 100%;
 }
 
 .bar {
-  width: 0.15rem;
-  height: 100%;
   background: #000;
+  block-size: 100%;
+  inline-size: 0.15rem;
 
   &:nth-child(odd) {
-    width: 0.3rem;
+    inline-size: 0.3rem;
   }
 
   &:nth-child(3n) {
-    height: 30%;
+    block-size: 30%;
   }
 
   &:nth-child(3n + 1) {
-    height: 60%;
+    block-size: 60%;
   }
 
   &:last-child {
-    height: 100%;
+    block-size: 100%;
   }
 }
