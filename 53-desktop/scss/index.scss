@@ -1,0 +1,169 @@
+$dark-red: #a41121;
+$light-red: #c20116;
+
+html {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #000;
+  font-size: 1.4rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr repeat(2, auto) 3.5rem repeat(3, auto) 1fr;
+  grid-template-columns: 1fr repeat(3, auto) 1fr;
+  min-height: 100vh;
+}
+
+.title {
+  z-index: 1;
+  grid-row: 3;
+  grid-column: 1 / 5;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 0.9;
+  text-align: right;
+  background: #000;
+
+  strong {
+    display: block;
+    font-weight: 700;
+  }
+}
+
+.title-block {
+  grid-row: 3;
+  grid-column: 5;
+  background: #000;
+}
+
+.quote {
+  padding: 0.3rem;
+  font-size: 2rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.quote1 {
+  grid-row: 4 / 9;
+  grid-column: 2;
+  color: #000;
+  font-weight: 700;
+  background: $dark-red;
+}
+
+.quote2 {
+  display: flex;
+  grid-row: 1 / 5;
+  grid-column: 3 / 4;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  background: $light-red;
+}
+
+.quote3 {
+  grid-row: 5;
+  grid-column: 3 / 5;
+  padding: 0.3rem 0 0.3rem 0.5rem;
+  font-size: 1.7rem;
+  text-align: right;
+}
+
+.attribution {
+  grid-row: 6;
+  grid-column: 3 / 5;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.uppercase {
+  grid-row: 2;
+  grid-column: 4;
+  justify-self: flex-end;
+  padding: 0.5rem 0;
+  writing-mode: vertical-lr;
+
+  strong {
+    display: block;
+  }
+}
+
+.lowercase {
+  grid-row: 1 / 3;
+  grid-column: 2;
+  padding: 0.4rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: right;
+  background: $dark-red;
+  writing-mode: vertical-rl;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: column;
+  grid-row: 7;
+  grid-column: 3 / 5;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  writing-mode: vertical-rl;
+}
+
+.bars {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+  justify-content: space-around;
+  block-size: 100%;
+}
+
+.bar {
+  background: #000;
+  block-size: 100%;
+  inline-size: 0.15rem;
+
+  &:nth-child(odd) {
+    inline-size: 0.3rem;
+  }
+
+  &:nth-child(3n) {
+    block-size: 30%;
+  }
+
+  &:nth-child(3n + 1) {
+    block-size: 60%;
+  }
+
+  &:last-child {
+    block-size: 100%;
+  }
+}
