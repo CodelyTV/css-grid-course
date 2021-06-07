@@ -30,7 +30,7 @@ p {
 
 .grid {
   display: grid;
-  grid-template-rows: 1fr repeat(6, auto) 1fr;
+  grid-template-rows: 1fr repeat(2, auto) 3.5rem repeat(3, auto) 1fr;
   grid-template-columns: 1fr repeat(3, auto) 1fr;
   min-height: 100vh;
 }
@@ -68,12 +68,19 @@ p {
 }
 
 .quote1 {
+  grid-row: 4 / 9;
+  grid-column: 2;
   color: #000;
   font-weight: 700;
   background: $dark-red;
 }
 
 .quote2 {
+  display: flex;
+  grid-row: 1 / 5;
+  grid-column: 3 / 4;
+  align-items: flex-end;
+  justify-content: center;
   color: #fff;
   font-weight: 700;
   font-size: 2.5rem;
@@ -82,11 +89,18 @@ p {
 }
 
 .quote3 {
+  grid-row: 5;
+  grid-column: 3 / 5;
+  padding: 0.3rem 0 0.3rem 0.5rem;
   font-size: 1.7rem;
+  text-align: right;
 }
 
 .attribution {
+  grid-row: 6;
+  grid-column: 3 / 5;
   font-size: 1rem;
+  text-align: right;
 }
 
 .uppercase {
