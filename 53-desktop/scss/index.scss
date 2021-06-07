@@ -3,6 +3,10 @@ $light-red: #c20116;
 
 html {
   font-size: 16px;
+
+  @media (min-width: 30rem) {
+    font-size: 18px;
+  }
 }
 
 *,
@@ -30,7 +34,7 @@ p {
 
 .grid {
   display: grid;
-  grid-template-rows: 1fr repeat(2, auto) 3.5rem repeat(3, auto) 1fr;
+  grid-template-rows: 1.5fr repeat(2, auto) 3.5rem repeat(3, auto) 1fr;
   grid-template-columns: 1fr repeat(3, auto) 1fr;
   min-height: 100vh;
 }
@@ -94,6 +98,11 @@ p {
   padding: 0.3rem 0 0.3rem 0.5rem;
   font-size: 1.7rem;
   text-align: right;
+
+  @media (min-width: 50rem) {
+    grid-row: 4;
+    grid-column: 4 / 5;
+  }
 }
 
 .attribution {
@@ -101,6 +110,11 @@ p {
   grid-column: 3 / 5;
   font-size: 1rem;
   text-align: right;
+
+  @media (min-width: 50rem) {
+    grid-row: 5;
+    grid-column: 4;
+  }
 }
 
 .uppercase {
@@ -109,6 +123,13 @@ p {
   justify-self: flex-end;
   padding: 0.5rem 0;
   writing-mode: vertical-lr;
+
+  @media (min-width: 50rem) {
+    grid-column: 4 / 6;
+    justify-self: flex-start;
+    padding-left: 5rem;
+    writing-mode: horizontal-tb;
+  }
 
   strong {
     display: block;
@@ -136,6 +157,13 @@ p {
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   writing-mode: vertical-rl;
+
+  @media (min-width: 50rem) {
+    grid-row: 5;
+    grid-column: 3 / 4;
+    min-height: 17rem;
+    writing-mode: horizontal-tb;
+  }
 }
 
 .bars {
