@@ -1,0 +1,36 @@
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 28rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+
+  > * {
+    min-height: 28rem;
+    margin: 0 0.5rem 1rem;
+
+    @media (min-width: 35rem) {
+      width: 15rem;
+      float: left;
+
+      &:nth-child(2n + 1) {
+        clear: both;
+      }
+    }
+
+    @media (min-width: 50rem) {
+      &:nth-child(2n + 1) {
+        clear: none;
+      }
+
+      &:nth-child(3n + 1) {
+        clear: both;
+      }
+    }
+
+    @supports (display: grid) {
+      width: auto;
+      min-height: 0;
+      margin: 0;
+    }
+  }
+}
